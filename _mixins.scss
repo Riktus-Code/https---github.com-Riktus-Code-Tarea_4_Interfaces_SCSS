@@ -1,0 +1,16 @@
+@mixin crearBoton($color,$coloLetra,$tamanio){
+    flex-direction: row;
+    background-color: $color;
+    color: $coloLetra;
+    padding: $tamanio;
+    font-size: 15px;
+    text-decoration: none;
+    border:none;
+
+}
+
+@mixin dispositivos($pantalla){
+    @media (min-width:$pantalla) {
+        @content;
+    }
+}

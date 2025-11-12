@@ -1,0 +1,84 @@
+@import '_variables';
+@import '_mixins';
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+img{
+    width: 100%;
+}
+
+.main{
+    padding: 20px;
+    max-width: 1100px;//parar en 1100px
+    margin:0 auto;//centrar
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $color_fondo;
+    gap: 1rem;
+    @include dispositivos ($tablet){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        
+    }
+}
+
+h1{
+    text-align: center;
+    color: $color_texto;
+    margin-bottom: 2rem;
+    @include dispositivos($tablet){
+        flex-basis: 100%;
+    }
+    
+}
+
+
+.articulo{
+    background-color: $color_articulo;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    @include dispositivos ($tablet){
+        flex-basis: calc((100%/2) - 1rem);
+    }
+    @include dispositivos ($monitor){
+        flex-basis: calc((100%/3) - 2rem);
+    }
+}
+
+.articulo img{
+    width:100%;
+    height: auto;
+}
+.contenido{
+    text-align: center;
+    margin: 20px;
+}
+.contenido h2{
+    color: $color_texto;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.contenido p {
+    color: $color_texto;
+    font-size: 14px;
+    margin: 5px ;
+}
+
+.contenido span{
+    color:$color_span;
+    font-weight: bold;
+}
+
+button{
+    @include crearBoton ($color_boton,$color_letra_boton,$tamanio_boton);
+}
+
+//flex grow sirve para repartir el espacio a partes iguales (le das 1 a todos y cada hijo se reparte el espacio a 1) y flex-basics 
+//es cuando conoces el porcentaje que le vas a dar a cada hijo.
