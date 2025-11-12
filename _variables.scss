@@ -15,3 +15,8 @@ $tamanio_boton:10px;
 
 $tablet:480px;
 $monitor:780px;
+
+//tamaño articulo
+
+$anchoTablet: calc((100%/2) - 1rem);
+$anchoMonitor: calc((100%/3) - 2rem);
