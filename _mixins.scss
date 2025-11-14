@@ -1,4 +1,4 @@
-@mixin crearBoton($color,$coloLetra,$tamanio){
+@mixin crearBoton($color,$coloLetra,$tamanio,$colorCambioHover){
     flex-direction: row;
     background-color: $color;
     color: $coloLetra;
@@ -6,6 +6,10 @@
     font-size: 15px;
     text-decoration: none;
     border:none;
+
+    &:hover{
+        background-color: $colorCambioHover;
+    }
 
 }
 
